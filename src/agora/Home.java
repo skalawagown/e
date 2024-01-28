@@ -1,6 +1,10 @@
 
 package agora;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
 
 
 
@@ -12,12 +16,10 @@ public class Home extends javax.swing.JFrame {
     public Home() {
         initComponents();
         this.setExtendedState(Home.MAXIMIZED_BOTH);
+        setTitle("Agora dashboard");
+        setSize(1500, 830);
         
-        
-        
-        
-        
-    }
+    }      
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,10 +44,13 @@ public class Home extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.setBackground(new java.awt.Color(23, 35, 51));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        jToggleButton1.setBackground(new java.awt.Color(23, 35, 51));
         home_btn_grp.add(jToggleButton1);
         jToggleButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\tano0\\Downloads\\client-5250.png")); // NOI18N
         jToggleButton1.setText("Customers");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -54,13 +59,22 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        jToggleButton2.setBackground(new java.awt.Color(23, 35, 51));
         home_btn_grp.add(jToggleButton2);
         jToggleButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton2.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\tano0\\Downloads\\bill-8854.png")); // NOI18N
         jToggleButton2.setText("Invoice");
+        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton2ActionPerformed(evt);
+            }
+        });
 
+        jToggleButton3.setBackground(new java.awt.Color(23, 35, 51));
         home_btn_grp.add(jToggleButton3);
         jToggleButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton3.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\tano0\\Downloads\\businessman-280.png")); // NOI18N
         jToggleButton3.setText("Supplier");
         jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -69,13 +83,17 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        jToggleButton4.setBackground(new java.awt.Color(23, 35, 51));
         home_btn_grp.add(jToggleButton4);
         jToggleButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton4.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\tano0\\Downloads\\news-4300.png")); // NOI18N
         jToggleButton4.setText("Reports");
 
+        jToggleButton5.setBackground(new java.awt.Color(23, 35, 51));
         home_btn_grp.add(jToggleButton5);
         jToggleButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton5.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\tano0\\Downloads\\business-and-finance-14763.png")); // NOI18N
         jToggleButton5.setText("Sales");
         jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -84,8 +102,10 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        jToggleButton6.setBackground(new java.awt.Color(23, 35, 51));
         home_btn_grp.add(jToggleButton6);
         jToggleButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton6.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\tano0\\Downloads\\red-warehouse-and-delivery-truck-17189.png")); // NOI18N
         jToggleButton6.setText("Product");
         jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -94,8 +114,10 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        jToggleButton7.setBackground(new java.awt.Color(23, 35, 51));
         home_btn_grp.add(jToggleButton7);
         jToggleButton7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton7.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton7.setIcon(new javax.swing.ImageIcon("C:\\Users\\tano0\\Downloads\\money-payment-6400.png")); // NOI18N
         jToggleButton7.setText("Liability");
         jToggleButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -137,29 +159,30 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
+        jPanel2.setBackground(new java.awt.Color(23, 35, 51));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1346, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 112, Short.MAX_VALUE)
         );
 
-        panel_load.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        panel_load.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout panel_loadLayout = new javax.swing.GroupLayout(panel_load);
         panel_load.setLayout(panel_loadLayout);
         panel_loadLayout.setHorizontalGroup(
             panel_loadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 1009, Short.MAX_VALUE)
         );
         panel_loadLayout.setVerticalGroup(
             panel_loadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,25 +194,24 @@ public class Home extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(panel_load, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addGap(83, 83, 83))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panel_load, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addGap(92, 92, 92))
         );
 
         pack();
@@ -240,6 +262,17 @@ public class Home extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jToggleButton5ActionPerformed
+
+    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        Invoice inv = new Invoice();
+        jpload.jPanelLoader(panel_load, inv);
+        
+        
+        
+        
+    }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**
      * @param args the command line arguments

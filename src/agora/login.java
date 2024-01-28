@@ -27,13 +27,11 @@ public class login extends javax.swing.JFrame {
         initComponents();
         
         con = db.mycon();
+        setResizable(false);
+        setTitle("Agora login");
         
     }
 
-    
-    
-    
-    
     
     
     @SuppressWarnings("unchecked")
@@ -55,11 +53,14 @@ public class login extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0, 80));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Login");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Username:");
 
         jname.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -67,10 +68,12 @@ public class login extends javax.swing.JFrame {
         jpass.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password:");
 
-        jButton1.setBackground(new java.awt.Color(186, 113, 22));
+        jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +82,7 @@ public class login extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Agora Inventory System");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -125,11 +129,11 @@ public class login extends javax.swing.JFrame {
                 .addGap(126, 126, 126))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 100, 440, 480));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 440, 480));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\tano0\\Downloads\\cropped-1440-900-1169181.jpg")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\tano0\\Downloads\\8351153.gif")); // NOI18N
         jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 690));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 1070, 800));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -144,7 +148,7 @@ public class login extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1297, 230, -1, -1));
 
-        setSize(new java.awt.Dimension(1087, 694));
+        setSize(new java.awt.Dimension(1085, 677));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -180,8 +184,15 @@ public class login extends javax.swing.JFrame {
                 dispose();
             }else{
 
-                JOptionPane.showMessageDialog(rootPane, "Login Failed...!");
-
+                JOptionPane.showMessageDialog(rootPane, "Login failed. Please enter the correct password.");
+try {
+            java.awt.Desktop.getDesktop().browse(new java.net.URI("https://www.youtube.com/watch?v=4BHQ2QryLQM"));
+        } catch (java.io.IOException | java.net.URISyntaxException e) {
+            e.printStackTrace();
+        }
+    
+        
+                
             }
 
         } catch (HeadlessException | SQLException e){
